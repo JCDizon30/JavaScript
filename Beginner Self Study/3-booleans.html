@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boolean</title>
+  </head>
+  <body>
+    <script>
+      //true
+      //false
+      console.log(typeof "true");
+      console.log(typeof true);
+
+      console.log(3 < 5);
+      console.log(3 > 5 - 5);
+
+      // == Trying the values to be equal
+      console.log(5 == "5.00");
+
+      // === Check the values if they are equal
+      console.log(5 === "5.00");
+
+      console.log(5 != "5.00");
+      console.log(5 !== "5.00");
+
+      //if statement
+      if (true) {
+        console.log("\nhello");
+      } else {
+        console.log("\nelse");
+      }
+
+      //Checking the age if valid to drive
+      const age = 15;
+
+      if (age >= 16) {
+        console.log("You can drive");
+      } else if (age >= 14) {
+        console.log("Almost there!");
+      } else {
+        console.log("You can not drive");
+      }
+
+      //Logical Operators
+      console.log("\nLogical Operators");
+
+      //AND
+      console.log(true && true);
+      console.log(true && false);
+
+      //OR
+      console.log(true || true);
+      console.log(false || false);
+      console.log(true || false);
+
+      //NOT
+      console.log(!true);
+      console.log(!false);
+
+      //Truthy and Falsy Values = use for shortcut
+      //Truthy
+      if (1) {
+        console.log("\ntruthy");
+      }
+
+      let cartQuantity = 5;
+      if (cartQuantity) {
+        console.log("cart has product");
+      }
+
+      //Falsy
+      if (0) {
+        console.log("truthy");
+      }
+
+      cartQuantity = 0;
+      if (cartQuantity) {
+        console.log("cart has product");
+      }
+
+      //Nan(Not a Number) = is a falsy values that invalid math.
+      console.log("text" / 5);
+
+      //Undefined = is a falsy values that something doesn't have a value.
+      let var1;
+      console.log(var1);
+
+      const var2 = undefined;
+      console.log(var2);
+
+      //Use in Logical Operators
+      console.log(!0);
+      console.log(!5);
+      console.log("");
+
+      //Shortcuts for if-statements
+      //Ternary Operator ?: = (?)if branch, (:)else branch. shortcut for if else statements.
+      const result1 = true ? "truthy" : "falsy";
+      console.log(result1);
+
+      const result2 = 0 ? "truthy" : "falsy";
+      console.log(result2);
+
+      //Guard Operator && = for blocking and make safe the code on the right.
+      false && console.log("hello");
+
+      const message = 5 && "hello";
+      console.log(message);
+
+      //Default Operator || = similar into the guard operator but uses (or).
+      const currency1 = "EUR" || "USD";
+      console.log(currency1);
+
+      const currency2 = false || "USD";
+      console.log(currency2);
+    </script>
+  </body>
+</html>
