@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissor</p>
+
+    <button
+      onclick="const RanNum = Math.random();
+               let ComMove = '';
+        if (RanNum >= 0 && RanNum < 1 / 3) {
+            ComMove = 'rock';
+        } else if (RanNum >= 1 / 3 && RanNum < 2 / 3) {
+            ComMove = 'paper';
+        } else if (RanNum >= 2 / 3 && RanNum < 1) {
+            ComMove = 'scissors';
+        }
+
+        let result = ''
+        if (ComMove === 'rock') {
+            result = 'Tie.'
+        } else if (ComMove === 'paper') {
+            result = 'You Lose.';
+        } else if (ComMove == 'scissors') {
+            result = 'You Win.';
+        }
+
+        alert('You picked Rock. Computer picked ' + ComMove + '. ' + result);
+    "
+    >
+      Rock
+    </button>
+
+    <button
+      onclick="const RanNum = Math.random();
+               let ComMove = '';
+        if (RanNum >= 0 && RanNum < 1 / 3) {
+            ComMove = 'rock';
+        } else if (RanNum >= 1 / 3 && RanNum < 2 / 3) {
+            ComMove = 'paper';
+        } else if (RanNum >= 2 / 3 && RanNum < 1) {
+            ComMove = 'scissors';
+        }
+
+        let result = ''
+        if (ComMove === 'rock') {
+            result = 'You win.'
+        } else if (ComMove === 'paper') {
+            result = 'Tie.';
+        } else if (ComMove == 'scissors') {
+            result = 'You lose.';
+        }
+
+        alert('You picked Paper. Computer picked ' + ComMove + '. ' + result);
+    "
+    >
+      Paper
+    </button>
+
+    <button
+      onclick="const RanNum = Math.random();
+                     let ComMove = '';
+        if (RanNum >= 0 && RanNum < 1 / 3) {
+            ComMove = 'rock';
+        } else if (RanNum >= 1 / 3 && RanNum < 2 / 3) {
+            ComMove = 'paper';
+        } else if (RanNum >= 2 / 3 && RanNum < 1) {
+            ComMove = 'scissors';
+        }
+
+        let result = ''
+        if (ComMove === 'rock') {
+            result = 'You Lose.'
+        } else if (ComMove === 'paper') {
+            result = 'You Win.';
+        } else if (ComMove == 'scissors') {
+            result = 'You Tie.';
+        }
+
+        alert('You picked Scissor. Computer picked ' + ComMove + '. ' + result);
+        "
+    >
+      Scissor
+    </button>
+
+    <script></script>
+  </body>
+</html>
