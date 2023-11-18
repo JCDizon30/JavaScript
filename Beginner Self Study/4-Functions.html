@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <script>
+      //Function = A lets us reuse code and the benefit of this removing the duplicating codes. if we want to run the codes again all we have to do is to type or call the variable name again with brackets.
+      function function1() {
+        console.log("hello");
+        console.log(2 + 2);
+      }
+      function1();
+
+      //Feature of Functions
+      //1. Return Statement = gets a value out of a function let us get a value out of a function, can return anything like: Strings, Numbers, Booleans and etc..
+
+      //2. Parameters = puts a value into a function, are sort of the opposite of a return statement.
+
+      function calcuTax(cost, taxPercent = 0.1) {
+        console.log(cost * taxPercent);
+      }
+      calcuTax(2000, 0.2);
+      calcuTax(5000);
+    </script>
+  </body>
+</html>
