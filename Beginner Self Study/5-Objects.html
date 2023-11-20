@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <script>
+      /*
+        //Object = An abject groups multiple values together.
+        //The (name & price) inside the product OBJECT called PROPERTY.
+        //Why we use OBJECT? = Make our code more organized.
+        const product = {
+          name: "socks",
+          price: 1090,
+        };
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        //Changing the value inside an OBJECT using their PROPERTY.
+        product.name = "cotton socks";
+        product.price = 2090;
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        //We can add a new Property and Value that not already exist inside to an object.
+        product.newProperty = true;
+        console.log(product);
+
+        //Removing a Property and Value from a Object.
+        delete product.newProperty;
+        console.log(product);
+      */
+
+      //Nested Object = Where an Object Inside an Object.
+      //Can put FUNCTION Inside The OBJECT.
+      const product2 = {
+        name: "shirt",
+        "delivery-time": "1 day",
+        rating: {
+          stars: 4.5,
+          count: 87,
+        },
+        fun: function function1() {
+          console.log("function inside object");
+        },
+      };
+
+      console.log(product2);
+      console.log(product2.name);
+
+      //Braket Notation = Another Way to print a Value of Property.
+      //Use when properties don't work with dot notation.
+      console.log("");
+      console.log(product2["name"]);
+      //Sample Situation
+      console.log(product2["delivery-time"]);
+
+      //To Access Values Inside the Inner Object
+      console.log(product2.rating);
+      console.log(product2.rating.stars);
+      console.log(product2.rating.count);
+      //Accessing a OBJECT FUNCTION = first declare the OBJECT then the PROPERTY.
+      product2.fun();
+
+      //Built-in Objects = They are provided by the Programming language
+      /*
+        Example
+        - console.log
+        - Math.random
+        - JSON
+        - localStorage
+        */
+
+      /*
+        JSON (JavaScript Object Notation)
+        - helps us work with JSON
+        - a syntax
+        - similar to javascript object
+        - but has less features
+        - not support single quotes
+        - not support function
+        - is more universal
+        - use when we send data between computers
+            and in different programming languages
+        - when storing data
+
+        Built-in JSON Objects
+        - helps us convert a JavaScript object to JSON.
+        - help us convert from a JSON back to JavaScript object
+        */
+      //EXAMPLE JS OBJECT CONVERT to JSON OBJECT
+      console.log("");
+      console.log(JSON.stringify(product2));
+      //EXAMPLE JSON OBJECT CONVERT to JS OBJECT
+      const jsonString = JSON.stringify(product2);
+      console.log(JSON.parse(jsonString));
+
+      /*
+        localStorage
+        - save values more permanently.
+        - make the website or page saved even we close or refresh it.
+        - only support strings
+
+        - EXAMPLE and SYNTAX
+        localStorage.setItem('String1', 'String2')
+        localStorage.setItem("score", JSON.stringify(score));
+        localStorage.removeItem('score');
+
+        - How to get this String out of local storage.
+        console.log(localStorage.getItem("String1"));
+        const var1 = JSON.parse(localStorage.getItem("var1"));
+        */
+
+      //Auto-Boxing = Automatically wraps the string in an object like a box.
+      //- Can Work in Numbers and Boolean.
+      //- Not Working in NULL and Undefined.
+      console.log("");
+      console.log("Hello".length);
+      console.log("Hello".toUpperCase());
+      console.log("Hello".toLowerCase());
+      console.log((7).toString());
+      console.log(true.toString());
+
+      //Objects = are references.
+      const object1 = {
+        message: "hello",
+      };
+      const object2 = object1;
+
+      object1.message = "Good Job!";
+      console.log(object1);
+      console.log(object2);
+
+      //We can't compare Objects Directly.
+      const object3 = {
+        message: "Good Job!",
+      };
+      console.log(object3 === object1);
+      console.log(object2 === object1);
+      console.log(object1.message === object3.message);
+
+      //Some Shortcut for Objects
+      const object4 = {
+        message: "Good Job!",
+        price: 799,
+      };
+
+      //Destructuring Shortcut
+      // const message = object4.message;
+      const { message, price } = object4;
+      console.log(message);
+      console.log(price);
+
+      //Shorthand Property
+      const object5 = {
+        //message: message, = this code and the code under of this are same.
+        message,
+
+        //method: function function1() {
+        //  console.log("method");       = this code and the code under of this are same.
+        //},
+        method() {
+          console.log("method");
+        },
+      };
+      console.log(object5);
+      object5.method();
+    </script>
+  </body>
+</html>
