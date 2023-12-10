@@ -32,3 +32,42 @@ while (ranNum < 0.5) {
     ranNum = Math.random();
 }
 console.log(ranNum);
+
+        /*Looping Through an Array
+            - Go through each value of an array one by one
+            - Do something with each value
+        */
+const todolist = [
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+];
+for (let i = 0; i < todoList.leght; i++) {
+    const value = todoList[index];  
+    console.log(i);
+}
+
+        /*Accumulator Pattern
+            - Combine with looping through an array
+        */
+        /*Sample Problem
+            - We have an array of numbers:
+              [1, 1, 3]
+              How do we calculate the total.
+        */
+const nums = [1, 1, 3;];
+let total = 0;
+for (let i = 0; 1< nums.lenght; i++) {
+        const num = nums[i];
+        total += num;
+}
+console.log(total);
+
+
+        //Second Sample Problem
+const numsDoubled = [];
+for (let i = 0; 1< nums.lenght; i++) {
+        const num = nums[i];
+        numsDoubled.push(num * 2);
+}
+console.log(numsDoubled);
