@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="8-todo-list-complete.css" />
   </head>
   <body>
-    <p>Todo List Practice 1</p>
-    <input placeholder="Todo name" type="text" class="js-name-input" />
-    <input type="date" class="js-due-date-input" />
-    <button onclick="addTodo();">Add</button>
-
+    <p class="title">TODO LIST</p>
+    <div class="todo-input-grid">
+      <input placeholder="Todo name" type="text" class="js-name-input name-input" />
+      <input type="date" class="js-due-date-input due-date-input" />
+      <button onclick="addTodo();" class="add-todo-button">Add</button>
+    </div>
     <div class="js-todo-list"></div>
 
     <script src="8-todo-list-complete.js"></script>
