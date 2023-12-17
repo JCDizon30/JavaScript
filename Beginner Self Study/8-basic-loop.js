@@ -71,3 +71,61 @@ for (let i = 0; 1< nums.lenght; i++) {
         numsDoubled.push(num * 2);
 }
 console.log(numsDoubled);
+
+//Arrays are References
+      //The Examples in buttom are same result
+      //both if these point to the same array in memory
+      const array1 = [1, 2, 3];
+      const array2 = array1;
+      arrat2.push(4);
+      console.log(array1);
+      console.log(array2);
+
+      //Destructuring = is a shortcut
+      //The first index in array will save it in the first Variable
+      //The second index in array will save it in the second Variable
+      const [firstValue, secondValue] = [1, 2, 3];
+
+      //More details about loops
+      //1. Break = Exit a loop early
+      for (let i = 1; i <= 10; i++) {
+        console.log(i);
+        if (i === 8) {
+          break;
+        }
+      }
+      //2. Continue = Skip 1 iteration or 1 run of the loop
+      for (let i = 1; i <= 10; i++) {
+        console.log(i);
+        if (i === 3) {
+          continue;
+        }
+      }
+      //Example. skip a number if it's divisible by 3
+      for (let i = 1; i <= 10; i++) {
+        if (i % 3 === 0) {
+          continue;
+        }
+        console.log(i);
+      }
+      //3. Combining Break and Continue
+      for (let i = 1; i <= 10; i++) {
+        if (i === 3) {
+          continue;
+        }
+        console.log(i);
+        if (i === 8) {
+          break;
+        }
+      }
+      //Use Continue in while loop
+      //Count 1 to 10 using while loop
+      let i = 1;
+      while (i <= 10) {
+        if (i % 3 === 0) {
+          i++
+          continue;
+        }
+        console.log(i);
+        i++;
+      }
